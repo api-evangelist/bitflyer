@@ -1,0 +1,35 @@
+name: bitFlyer API Rate Limits
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: bitflyer
+providerId: bitflyer
+created: '2026-10-13'
+modified: '2026-10-13'
+generated: '2026-10-13'
+method: searched
+source: https://lightning.bitflyer.com/docs?lang=en#api-limits
+docs: https://lightning.bitflyer.com/docs?lang=en#api-limits
+description: >-
+  bitFlyer Lightning HTTP API usage limits as published in the API Limits section of the docs.
+  Exceeding a limit temporarily blocks further requests, after which the maximum request limit is
+  temporarily decreased. Response headers and the status code on exhaustion are not documented.
+limits:
+- name: Same IP address
+  scope: ip
+  limit_count: 500
+  window: 5 minutes
+  window_seconds: 300
+- name: Private APIs
+  scope: api-key
+  limit_count: 500
+  window: 5 minutes
+  window_seconds: 300
+- name: Order placement (sendchildorder, sendparentorder, cancelallchildorders combined)
+  scope: api-key
+  limit_count: 300
+  window: 5 minutes
+  window_seconds: 300
+  applies_to:
+  - POST /v1/me/sendchildorder
+  - POST /v1/me/sendparentorder
+  - POST /v1/me/cancelallchildorders

@@ -1,23 +1,71 @@
 aid: bitflyer
 name: bitFlyer
-description: 'bitFlyer is a company surfaced via the API Evangelist harvest backlog (source: market-gap)
-  and added to the network as a stub for full-pipeline profiling.'
+description: bitFlyer is a Japanese cryptocurrency exchange. Its bitFlyer Lightning trading platform exposes a public
+  and private HTTP API at api.bitflyer.com for market data, account assets, deposits and withdrawals, and order
+  placement.
 url: https://raw.githubusercontent.com/api-evangelist/bitflyer/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Exchange
+- Trading
+- Japan
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Spectral
+  url: rules/bitflyer-rules.yml
+- type: ErrorCatalog
+  url: errors/bitflyer-problem-types.yml
+- type: Conformance
+  url: conformance/bitflyer-conformance.yml
+- type: Hosts
+  url: hosts/bitflyer-hosts.yml
+- type: Vendors
+  url: vendors/bitflyer-vendors.yml
+- type: DomainSecurity
+  url: security/bitflyer-domain-security.yml
 - type: Website
   url: https://bitflyer.com
+- type: Documentation
+  url: https://lightning.bitflyer.com/docs?lang=en
+- type: RateLimits
+  url: rate-limits/bitflyer-rate-limits.yml
+- type: Authentication
+  url: authentication/bitflyer-authentication.yml
+apis:
+- aid: bitflyer:lightning-http-api
+  name: bitFlyer Lightning HTTP API
+  description: Public market data (markets, order book, ticker, executions, funding rates, exchange status) and
+    private account, deposit/withdrawal and trading operations, authenticated with HMAC-signed API keys.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://lightning.bitflyer.com/docs?lang=en
+  baseURL: https://api.bitflyer.com/v1
+  tags:
+  - Cryptocurrency
+  - Trading
+  - Market Data
+  properties:
+  - type: Documentation
+    url: https://lightning.bitflyer.com/docs?lang=en
+  - type: OpenAPI
+    url: openapi/_ae-authored/bitflyer-openapi-generated.yml
+    x-provenance: generated
+    x-generated-from: documentation
+  - type: APIPlayground
+    url: https://lightning.bitflyer.com/docs/playground?lang=en
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v5

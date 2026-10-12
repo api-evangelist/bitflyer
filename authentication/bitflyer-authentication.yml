@@ -1,0 +1,16 @@
+generated: '2026-10-13'
+method: searched
+source: https://lightning.bitflyer.com/docs?lang=en#authentication
+provider: bitflyer
+summary: >-
+  Public HTTP APIs need no key. Private APIs require an API key and secret generated on the
+  bitFlyer Lightning developer page, sent as ACCESS-KEY, ACCESS-TIMESTAMP and ACCESS-SIGN headers,
+  where ACCESS-SIGN is an HMAC-SHA256 of timestamp + HTTP method + request path + body keyed with
+  the API secret. Some withdrawal operations also document two-factor authentication.
+schemes:
+- type: apiKey
+  name: HMAC-signed API key
+  in: header
+  headers: [ACCESS-KEY, ACCESS-TIMESTAMP, ACCESS-SIGN]
+  signature: HMAC-SHA256
+docs: https://lightning.bitflyer.com/docs?lang=en#authentication

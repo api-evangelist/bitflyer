@@ -1,0 +1,31 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/_ae-authored/bitflyer-openapi-generated.yml
+format: custom
+envelope:
+  media_type: null
+  schema: null
+coverage:
+  operations: 34
+  statuses_declared: 3
+problems:
+- status: 400
+  title: Bad Request
+  description: Bad request.
+  operations: 34
+  media_types: []
+  schema: null
+- status: 401
+  title: Unauthorized
+  description: Authentication failed.
+  operations: 24
+  media_types: []
+  schema: null
+- status: 429
+  title: Too Many Requests
+  description: API limit exceeded; requests are temporarily blocked.
+  operations: 34
+  media_types: []
+  schema: null
