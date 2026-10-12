@@ -1,0 +1,179 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/bitflyer-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on bitflyer.com, api.bitflyer.com; verdict opaque (https://bitflyer.com/mcp
+  answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate tools below are derived from the 33 operation(s)
+  in the provider''s own OpenAPI (33 listed); they describe what a server WOULD expose, not one that exists.'
+tools:
+- name: getmarkets
+  operationId: getmarkets
+  method: GET
+  path: /v1/getmarkets
+  description: Market List
+- name: getboard
+  operationId: getboard
+  method: GET
+  path: /v1/getboard
+  description: Order Book
+- name: getticker
+  operationId: getticker
+  method: GET
+  path: /v1/getticker
+  description: Ticker
+- name: getexecutions
+  operationId: getexecutions
+  method: GET
+  path: /v1/getexecutions
+  description: Execution History
+- name: getboardstate
+  operationId: getboardstate
+  method: GET
+  path: /v1/getboardstate
+  description: Orderbook Status
+- name: gethealth
+  operationId: gethealth
+  method: GET
+  path: /v1/gethealth
+  description: Exchange Status
+- name: getfundingrate
+  operationId: getfundingrate
+  method: GET
+  path: /v1/getfundingrate
+  description: Funding Rate
+- name: getfundingratehistory
+  operationId: getfundingratehistory
+  method: GET
+  path: /v1/getfundingratehistory
+  description: Funding Rate History
+- name: getcorporateleverage
+  operationId: getcorporateleverage
+  method: GET
+  path: /v1/getcorporateleverage
+  description: Max Leverage for Corporate Accounts
+- name: getchats
+  operationId: getchats
+  method: GET
+  path: /v1/getchats
+  description: Chat
+- name: getpermissions
+  operationId: getpermissions
+  method: GET
+  path: /v1/me/getpermissions
+  description: Get API Key Permissions
+- name: getbalance
+  operationId: getbalance
+  method: GET
+  path: /v1/me/getbalance
+  description: Get Account Asset Balance
+- name: getcollateral
+  operationId: getcollateral
+  method: GET
+  path: /v1/me/getcollateral
+  description: Get Margin Status
+- name: getcollateralaccounts
+  operationId: getcollateralaccounts
+  method: GET
+  path: /v1/me/getcollateralaccounts
+  description: Get Margin Accounts
+- name: getaddresses
+  operationId: getaddresses
+  method: GET
+  path: /v1/me/getaddresses
+  description: Get Crypto Assets Deposit Addresses
+- name: getcoinins
+  operationId: getcoinins
+  method: GET
+  path: /v1/me/getcoinins
+  description: Get Crypto Assets Deposit History
+- name: getcoinouts
+  operationId: getcoinouts
+  method: GET
+  path: /v1/me/getcoinouts
+  description: Get Crypto Assets Transaction History
+- name: getbankaccounts
+  operationId: getbankaccounts
+  method: GET
+  path: /v1/me/getbankaccounts
+  description: Get Summary of Bank Accounts
+- name: getdeposits
+  operationId: getdeposits
+  method: GET
+  path: /v1/me/getdeposits
+  description: Get Cash Deposits
+- name: withdraw
+  operationId: withdraw
+  method: POST
+  path: /v1/me/withdraw
+  description: Withdrawing Funds
+- name: getwithdrawals
+  operationId: getwithdrawals
+  method: GET
+  path: /v1/me/getwithdrawals
+  description: Get Deposit Cancellation History
+- name: sendchildorder
+  operationId: sendchildorder
+  method: POST
+  path: /v1/me/sendchildorder
+  description: Send a New Order
+- name: cancelchildorder
+  operationId: cancelchildorder
+  method: POST
+  path: /v1/me/cancelchildorder
+  description: Cancel Order
+- name: sendparentorder
+  operationId: sendparentorder
+  method: POST
+  path: /v1/me/sendparentorder
+  description: Submit New Parent Order (Special Order)
+- name: cancelparentorder
+  operationId: cancelparentorder
+  method: POST
+  path: /v1/me/cancelparentorder
+  description: Cancel Parent Order
+- name: cancelallchildorders
+  operationId: cancelallchildorders
+  method: POST
+  path: /v1/me/cancelallchildorders
+  description: Cancel All Orders
+- name: getchildorders
+  operationId: getchildorders
+  method: GET
+  path: /v1/me/getchildorders
+  description: List Orders
+- name: getparentorders
+  operationId: getparentorders
+  method: GET
+  path: /v1/me/getparentorders
+  description: List Parent Orders
+- name: getparentorder
+  operationId: getparentorder
+  method: GET
+  path: /v1/me/getparentorder
+  description: Get Parent Order Details
+- name: getbalancehistory
+  operationId: getbalancehistory
+  method: GET
+  path: /v1/me/getbalancehistory
+  description: List Balance History
+- name: getpositions
+  operationId: getpositions
+  method: GET
+  path: /v1/me/getpositions
+  description: Get Open Interest Summary
+- name: getcollateralhistory
+  operationId: getcollateralhistory
+  method: GET
+  path: /v1/me/getcollateralhistory
+  description: Get Margin Change History
+- name: gettradingcommission
+  operationId: gettradingcommission
+  method: GET
+  path: /v1/me/gettradingcommission
+  description: Get Trading Commission
