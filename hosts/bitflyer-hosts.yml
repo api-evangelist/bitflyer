@@ -44,10 +44,13 @@ hosts:
   found_by:
   - pointer
   - apis[]
+  - vendor-detect
   types:
   - Documentation
   serves:
   - docs
+  - cdn
+  vendor: akamai
   registrable_domain: bitflyer.com
   role: docs
   relation: own

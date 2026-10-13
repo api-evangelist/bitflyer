@@ -65,7 +65,7 @@ apis:
   - type: APIPlayground
     url: https://lightning.bitflyer.com/docs/playground?lang=en
 x-enrichment:
-  date: '2026-10-13'
   status: enriched
-  artifacts_added: 4
   pass: local-v5
+  date: '2026-10-13'
+  artifacts_added: 4
