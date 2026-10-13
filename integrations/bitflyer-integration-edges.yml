@@ -41,7 +41,7 @@ edges:
   evidence: https://api.coingecko.com/api/v3/exchanges/bitflyer
   matched_by: domain:bitflyer.com
   coingecko_id: bitflyer
-  trust_score: 6
+  trust_score: 7
   detected_by: sweep-crypto.py
   first_seen: '2026-10-13'
 - partner_name: MiCA (EU)
