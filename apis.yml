@@ -44,24 +44,89 @@ common:
 - type: Authentication
   url: authentication/bitflyer-authentication.yml
 apis:
-- aid: bitflyer:lightning-http-api
-  name: bitFlyer Lightning HTTP API
-  description: Public market data (markets, order book, ticker, executions, funding rates, exchange status) and
-    private account, deposit/withdrawal and trading operations, authenticated with HMAC-signed API keys.
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+- aid: bitflyer:bitflyer-account-api
+  name: bitFlyer Account API
+  description: The Account API from bitFlyer — 1 operation(s) for account.
   humanURL: https://lightning.bitflyer.com/docs?lang=en
   baseURL: https://api.bitflyer.com/v1
   tags:
-  - Cryptocurrency
-  - Trading
-  - Market Data
+  - Account
   properties:
+  - type: OpenAPI
+    url: openapi/bitflyer-account-api-openapi.yml
   - type: Documentation
     url: https://lightning.bitflyer.com/docs?lang=en
+  - type: APIPlayground
+    url: https://lightning.bitflyer.com/docs/playground?lang=en
+- aid: bitflyer:bitflyer-assets-api
+  name: bitFlyer Assets API
+  description: The Assets API from bitFlyer — 3 operation(s) for assets.
+  humanURL: https://lightning.bitflyer.com/docs?lang=en
+  baseURL: https://api.bitflyer.com/v1
+  tags:
+  - Assets
+  properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bitflyer-openapi-generated.yml
-    x-provenance: generated
-    x-generated-from: documentation
+    url: openapi/bitflyer-assets-api-openapi.yml
+  - type: Documentation
+    url: https://lightning.bitflyer.com/docs?lang=en
+  - type: APIPlayground
+    url: https://lightning.bitflyer.com/docs/playground?lang=en
+- aid: bitflyer:bitflyer-chat-api
+  name: bitFlyer Chat API
+  description: The Chat API from bitFlyer — 1 operation(s) for chat.
+  humanURL: https://lightning.bitflyer.com/docs?lang=en
+  baseURL: https://api.bitflyer.com/v1
+  tags:
+  - Chat
+  properties:
+  - type: OpenAPI
+    url: openapi/bitflyer-chat-api-openapi.yml
+  - type: Documentation
+    url: https://lightning.bitflyer.com/docs?lang=en
+  - type: APIPlayground
+    url: https://lightning.bitflyer.com/docs/playground?lang=en
+- aid: bitflyer:bitflyer-deposits-and-withdrawals-api
+  name: bitFlyer Deposits and Withdrawals API
+  description: >-
+    The Deposits and Withdrawals API from bitFlyer — 7 operation(s) for deposits and withdrawals.
+  humanURL: https://lightning.bitflyer.com/docs?lang=en
+  baseURL: https://api.bitflyer.com/v1
+  tags:
+  - Deposits and Withdrawals
+  properties:
+  - type: OpenAPI
+    url: openapi/bitflyer-deposits-and-withdrawals-api-openapi.yml
+  - type: Documentation
+    url: https://lightning.bitflyer.com/docs?lang=en
+  - type: APIPlayground
+    url: https://lightning.bitflyer.com/docs/playground?lang=en
+- aid: bitflyer:bitflyer-markets-api
+  name: bitFlyer Markets API
+  description: The Markets API from bitFlyer — 9 operation(s) for markets.
+  humanURL: https://lightning.bitflyer.com/docs?lang=en
+  baseURL: https://api.bitflyer.com/v1
+  tags:
+  - Markets
+  properties:
+  - type: OpenAPI
+    url: openapi/bitflyer-markets-api-openapi.yml
+  - type: Documentation
+    url: https://lightning.bitflyer.com/docs?lang=en
+  - type: APIPlayground
+    url: https://lightning.bitflyer.com/docs/playground?lang=en
+- aid: bitflyer:bitflyer-trading-api
+  name: bitFlyer Trading API
+  description: The Trading API from bitFlyer — 13 operation(s) for trading.
+  humanURL: https://lightning.bitflyer.com/docs?lang=en
+  baseURL: https://api.bitflyer.com/v1
+  tags:
+  - Trading
+  properties:
+  - type: OpenAPI
+    url: openapi/bitflyer-trading-api-openapi.yml
+  - type: Documentation
+    url: https://lightning.bitflyer.com/docs?lang=en
   - type: APIPlayground
     url: https://lightning.bitflyer.com/docs/playground?lang=en
 x-enrichment:

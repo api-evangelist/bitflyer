@@ -1,0 +1,23 @@
+{
+  "provider": "bitflyer",
+  "sources": [
+    "_ae-authored/bitflyer-openapi-generated.yml"
+  ],
+  "outputs": [
+    "bitflyer-account-api-openapi.yml",
+    "bitflyer-assets-api-openapi.yml",
+    "bitflyer-chat-api-openapi.yml",
+    "bitflyer-deposits-and-withdrawals-api-openapi.yml",
+    "bitflyer-markets-api-openapi.yml",
+    "bitflyer-trading-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "bitflyer-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+6 apis, 6 total)"
+  ],
+  "skipped": []
+}
