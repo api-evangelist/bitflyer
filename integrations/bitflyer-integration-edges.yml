@@ -13,6 +13,13 @@ checked:
 - https://raw.githubusercontent.com/ccxt/ccxt/master/exchanges.json
 - https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv
 - https://zapier.com/apps/bitflyer/integrations
+- https://www.fsa.go.jp/en/regulated/licensed/denshikessaisyudan.pdf
+- https://www.fsa.go.jp/en/regulated/licensed/en_kasoutuka.pdf
+- https://www.fsa.go.jp/en/regulated/licensed/index.html
+- https://www.fsa.go.jp/menkyo/menkyoj/daisan.pdf
+- https://www.fsa.go.jp/menkyo/menkyoj/dendai.pdf
+- https://www.fsa.go.jp/menkyo/menkyoj/kasoutuka.pdf
+- https://www.fsa.go.jp/menkyo/menkyoj/shikin_idou.pdf
 summary: null
 marketplace_apps: []
 edges:
@@ -71,4 +78,82 @@ edges:
     detected: '2026-10-14'
   detected_by: sweep-crypto.py
   first_seen: '2026-10-14'
+- partner_name: Japan FSA registered Crypto-asset Exchange Service Providers
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.fsa.go.jp/en/regulated/licensed/en_kasoutuka.pdf
+  category: Japanese crypto-asset exchange registration (Payment Services Act)
+  contract_reference:
+    register: Japan FSA registered Crypto-asset Exchange Service Providers
+    spec_file: null
+    standard: null
+    role: licensed-participant
+    registrations:
+    - registered_name: bitFlyer, Inc.
+      register_id: Director of the Kanto Finance Bureau No.00003
+      corporate_number: '2011101068824'
+      register_country: JP
+      matched_domain: bitflyer.com
+      matched_by: domain
+      en_name: Bitflyer
+      ja_name: 株式会社bitFlyer
+      registered: '2017-09-29'
+      handles:
+      - BTC
+      - ETH
+      - ETC
+      - LTC
+      - BCH
+      - MONA
+      - LSK
+      - XRP
+      - BAT
+      - XEM
+      - XLM
+      - XTZ
+      - DOT
+      - LINK
+      - XYM
+      - MATIC
+      - MKR
+      - ZPG
+      - FLR
+      - SHIB
+      - PLT
+      - SAND
+      - AXS
+      - MANA
+      - IMX
+      - APE
+      - CHZ
+      - DAI
+      - RNDR
+      - GRT
+      - AVAX
+      - DOGE
+      - ELF
+      - ZPGPT
+      - ZPGAG
+      - MASK
+      - POL
+      - PEPE
+      - SKY
+      - SOL
+      - TRX
+      - GRAM
+      - ATOM
+      - XDC
+      identity: wikidata Q28688900 'Bitflyer' P3225 2011101068824 (the register's corporate number) P856 https://www.bitflyer.com
+    signal_note: 'participation only: a Financial Services Agency registration; no API conformance is published
+      by this register'
+    detected_by: sweep-japan-fsa-registered-fintech.py
+    detected: '2026-10-21'
+    identity_source: wikidata P3225 (the register's Japanese corporate number) -> P856 (labelled provenance step;
+      Kin 2026-10-15 decision 1)
+  detected_by: sweep-japan-fsa-registered-fintech.py
+  first_seen: '2026-10-21'
 templates: []
